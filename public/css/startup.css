@@ -1,1 +1,18 @@
-body{background-color:#ecf0f1}
+body{background-color:#fff;padding:0}
+header{background-color:#22486e;border-bottom:5px solid #316599;height:70px;}
+header figure,header nav{display:inline-block;vertical-align:middle;height:100%}
+header figure{background-color:#ecf0f1;width:25%}
+header nav{margin-left:15px;width:70%;}
+header nav ul{height:100%;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+header nav ul li{display:inline-block;height:100%;margin-left:10px;margin-right:15px;padding:20px;vertical-align:top;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out;}
+header nav ul li a{color:#fff;font-size:18px;font-family:'Montserrat','Arial'}
+header nav ul li a:hover{color:#fff;text-decoration:none}
+header nav ul li:hover{background-color:#316599;cursor:pointer;-webkit-transition:all .3s ease-in-out}
+.fixed{width:100%;position:fixed;top:0;left:1px;z-index:9999}
+.page-welcome{width:100%;height:100%}
+#page-welcome{height:650px}
+#page-how-works,#page-types,#page-faqs,#page-contact{height:500px}
+#page-how-works{margin-top:10px;background-color:#2ecc71}
+#page-types{background-color:#9b59b6}
+#page-faqs{background-color:#f1c40f}
+#page-contact{background-color:#95a5a6}

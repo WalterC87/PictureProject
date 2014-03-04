@@ -1,4 +1,49 @@
 extends layout
 
 block content
-	h1 Hola Mundo
+	header
+		figure
+			div.logotipo
+				h1 PRINTU
+		nav#navigation
+			ul#nav
+				li 
+					a(href="#page-welcome") Home
+				li 
+					a(href="#page-how-works") ¿Cómo funciona?
+				li 
+					a(href="#page-types") ¡Quiero usarlo!
+				li 
+					a(href="#page-faqs") FAQ's
+				li 
+					a(href="#page-contact") Contacto
+
+	section#page-welcome.page-welcome.page.flexslider
+		ul.slides
+			li
+				img(src='/img/kitchen1.jpg')
+			li
+				img(src='img/kitchen2.jpg')
+			li
+				img(src='/img/kitchen3.jpg')
+			li
+				img(src='/img/kitchen4.jpg')
+
+
+	section#page-how-works.container
+
+	section#page-types.container
+
+	section#page-faqs.container
+
+	section#page-contact.container
+
+block scripts
+	script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.flexslider-min.js')
+	script(type='text/javascript', src='/js/vendors/scrollTo.js')
+	script(type='text/javascript', src='/js/vendors/nav.min.js')
+	script(type='text/javascript', src='/js/vendors/centralized.js')
+	script(type='text/javascript', src='/js/vendors/fixedonlater.js')
+	script(type='text/javascript', src='/js/main.js')
