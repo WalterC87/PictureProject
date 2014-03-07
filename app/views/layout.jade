@@ -2,13 +2,16 @@ doctype html
 html(lang="en")
 	head
 		meta(charset='utf-8')
-		title StartUp
-		meta(name='viewport',content='width=device-width, initial-scale=1.0')
+		meta(name='viewport',content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		meta(name='description', content='Printoo StartUp para diseño e impresion de fotografías')
+		title Printoo | impresion de fotografías
 		link(rel='stylesheet', href='/css/vendors/normalize.css')
 		link(rel='stylesheet', href='/css/vendors/bootstrap.css')
 		link(rel='stylesheet', href='/css/vendors/flexslider.css')
 		link(rel='stylesheet', href='/css/startup.css')
-		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700')
 	body
 		block content
 		block scripts

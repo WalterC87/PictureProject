@@ -1,49 +1,207 @@
 extends layout
 
 block content
-	header
-		figure
-			div.logotipo
-				h1 PRINTU
-		nav#navigation
-			ul#nav
-				li 
-					a(href="#page-welcome") Home
-				li 
-					a(href="#page-how-works") ¿Cómo funciona?
-				li 
-					a(href="#page-types") ¡Quiero usarlo!
-				li 
-					a(href="#page-faqs") FAQ's
-				li 
-					a(href="#page-contact") Contacto
-
-	section#page-welcome.page-welcome.page.flexslider
-		ul.slides
-			li
-				img(src='/img/kitchen1.jpg')
-			li
-				img(src='img/kitchen2.jpg')
-			li
-				img(src='/img/kitchen3.jpg')
-			li
-				img(src='/img/kitchen4.jpg')
+	nav#navigation.fixed-top
+		div.container
+			div.row-fluid
 
 
-	section#page-how-works.container
+				div.span12.center
+					a.brand.pull-left(href='./')
+						img(src='/img/assets/logo.png', alt='Printoo')
+					div.mobile-menu(data-toggle='collapse',data-target='.nav-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					ul#main-menu.nav-collapse.collapse
+						li
+							a(href='#page-welcome') Home
+						li
+							a(href='#page-how-works') ¿Cómo funciona?
+						li
+							a(href='#page-types') ¡Quiero usarlo!
+						li
+							a(href='#page-faqs') FAQ's
+						li
+							a(href='#page-contact') Contacto
+					div.social-icons.hover-big.pull-right
+						a.sicon-facebook(href='#')
+							i Facebook
+						a.sicon-twitter(href='#')
+							i Twitter
+						a.sicon-linkedin(href='#')
+							i LinkedIn
+						a.sicon-youtube(href='#')
+							i Youtube
+						a.sicon-pinterest(href='#')
+							i Pinterest 
 
-	section#page-types.container
+	section#page-welcome.pages.white.paralax.page-welcome
+		div.overlay
+		div.centralized
+			div.container
+				div.row-fluid
+					div.span12.center
+						div.logo
+							div.scrollNormal
+								a(href='#page-how-works')
+									img(src='/img/assets/pages/welcome/logo_welcome.png', width='140' height='140' alt='Printoo')
+							div.scrollDown
+								a(href='#page-how-works')
+									img(src='/img/assets/pages/welcome/logo2_welcome.png', width='140' height='140' alt='Printoo')
+						div#welcome-messages.line-divider
+							ul.slides
+								li
+									h1 Bienvenidos a Printoo
+								li
+									h2 Fresh &amp; clean
+								li
+									h2 Crea, Imprime y Diviértete
+								li
+									h2 Comparte tus fotos con tus amigos
+						p La nueva forma de imprimir tus fotografías.
+						div.social-icons.sicon-white.bordered
+							a.sicon-facebook(href='#')
+								i Facebook
+							a.sicon-twitter(href='#')
+								i Twitter
+							a.sicon-linkedin(href='#')
+								i LinkedIn
+							a.sicon-youtube(href='#')
+								i Youtube
+							a.sicon-pinterest(href='#')
+								i Pinterest
 
-	section#page-faqs.container
+	section#page-how-works.pages.page-work
+		div.container
+			header
+				h4.line-divider Como Funciona
+				p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
+			
+			article
+				ul.thumbnails.plugin-filter-elements.portfolio-items
+					li.span4.branding.mix
+						a
+							img(src='http://placehold.it/390x300' alt='paso 1')
 
-	section#page-contact.container
+							div.portfolio-overlay
+								h4 Instrucciones Paso 1
+
+					li.span4.branding.mix
+						a
+							img(src='http://placehold.it/390x300' alt='paso 2')
+
+							div.portfolio-overlay
+								h4 Instrucciones Paso 2
+
+					li.span4.branding.mix
+						a
+							img(src='http://placehold.it/390x300' alt='paso 3')
+
+							div.portfolio-overlay
+								h4 Instrucciones Paso 3				
+				
+	section#page-types.pages.white.paralax.page-features
+		div.overlay
+		div.container
+			header
+				h4.line-divider.white Empieza a Utilizar
+				h2 Printoo
+				div.row
+					div.span8.offset2
+						p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
+			article
+				div.row-fluid
+					div.span6.center
+						img(src='/img/assets/pages/features/about01.png', alt='regístrate')
+						h5 Usuarios
+						p.smallFontBy08.cutBy10 Sube tus fotografías favoritas e imprímelas para compartirlos con tus amigos o seres queridos son recuerdos que perduran para siempre.
+						a.btn.btn-success.btn-large(href='#/registro/usuario', data-destination='page-features', data-insert='before') Suscríbete
+					div.span6.center
+						img(src='/img/assets/pages/features/about03.png', alt='anunciate con nosotros')
+						h5 Empresas
+						p.smallFontBy08.cutBy10 Anunciate con nosotros, aumenta tus ingresos, llega a más gente, crea una nueva experiencia de publicidad única y exclusiva.
+						a.btn.btn-info.btn-large(href='#/registro/empresa', data-destination='page-features', data-insert='before') Anúnciate
+
+
+	section#page-faqs.pages
+		div.container
+			header
+				h4.line-divider FAQ's
+
+	section.pages.black-bg.white.page-contact
+		div.container
+			header
+				h4.line-divider.white Contáctanos
+				h2 Visítanos o Llámanos
+				div.row
+					div.span10.offset1
+						p Nos gusta compartir con nuestros usuarios y con nuestros clientes. Siéntente con la confianza necesaria para escribirnos tu consulta o puedes pasar a visitarnos sin ningún compromiso.
+					
+			article
+				div.row-fluid
+					div.span6
+						h5 Déjanos un mensaje
+
+						form
+							input.span12(type='text',placeholder='Título del mensaje', required='required', id='txtTitle', name='txtTile')
+							input.span12(type='email',placeholder='Título del mensaje', required='required', id='txtEmail', name='txtEmail')
+							textarea.span12(rows='10', id='txtMessage', name='txtMessage', placeholder='Mensaje', required='required')
+							button.btn.btn-info.btn-large(type='submit', id='btnEnviar') Enviar Mensaje
+
+					div.span5.offset1
+						h5 Conócenos
+						div.media
+							div.social-icons.sicon-white.pull-left
+								a.sicon-phone(href='#')
+									i Phone
+							div.media-body.smallFontBy08
+								p teléfono de contacto
+						div.media
+							div.social-icons.sicon-white.pull-left
+								a.sicon-place(href='#')
+									i Location
+							div.media-body.smallFontBy08
+								p Dirección a donde pueden llegar
+						div.media
+							div.social-icons.sicon-white.pull-left
+								a.sicon-mail(href='#')
+									i Location
+							div.media-body.smallFontBy08
+								p email@printoo.mx
+						br 
+						br
+						br 
+						br 
+						div.social-icons.sicon-white.bordered
+							a.sicon-facebook(href='#')
+								i Facebook
+							a.sicon-twitter(href='#')
+								i Twitter
+							a.sicon-linkedin(href='#')
+								i LinkedIn
+							a.sicon-youtube(href='#')
+								i Youtube
+							a.sicon-pinterest(href='#')
+								i Pinterest
+
+
+
+		div#map-image
+			img(src='/img/assets/pages/contact/map_bck.jpg', alt='Printoo')
+
 
 block scripts
 	script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 	script(type='text/javascript', src='/js/vendors/jquery.min.js')
-	script(type='text/javascript', src='/js/vendors/jquery.flexslider-min.js')
-	script(type='text/javascript', src='/js/vendors/scrollTo.js')
-	script(type='text/javascript', src='/js/vendors/nav.min.js')
-	script(type='text/javascript', src='/js/vendors/centralized.js')
-	script(type='text/javascript', src='/js/vendors/fixedonlater.js')
-	script(type='text/javascript', src='/js/main.js')
+	script(type='text/javascript', src='/js/vendors/bootstrap.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.bxslider.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.centralized.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.fixedonlater.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.hashloader.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.mixitup.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.nav.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.parallax-1.1.3.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.responsivevideos.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.scrollTo.min.js')
+	script(type='text/javascript', src='/js/application.js')
