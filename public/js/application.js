@@ -126,6 +126,18 @@ $(document).ready(function(){
         useCSS: false,
         pause: 4500
     });
+
+   $('#company-logos ul').bxSlider({
+        mode: 'horizontal',
+        auto: true,
+        minSlides: 1,
+        responsive: true,
+        touchEnabled: true,
+        pager: false,
+        controls: false,
+        useCss: false,
+        pause: 4500
+   })
     
     /**
     *   PAGE | WORK
