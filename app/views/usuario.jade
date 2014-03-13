@@ -1,55 +1,65 @@
-section.pages.turquei-bg.white.page-contact.registro
+section.pages.register.black.page-contact.registro.paralax
 		div.container
 			header
 				div.close-portfolio.pull-right
-					span cerrar
+					span X
 					div.clearfix
 				//-h4.line-divider.white Registro de Usuarios
-				h2 Suscríbete es gratis y divertido
+				p.div-title Comparte con nosotros!!
 				
 			article
 				div.row-fluid
-					div.span6
-						h5 Déjanos un mensaje
+					div.span6.cls-form
+						h5.center.title-form Registrate
+						form.offset1(method='POST')#user_register_form
+							label.label_form Nombre
+							input.span10(type='text',required='required', id='txtNombre', name='txtNombre')
+							
+							label.label_form Correo Electrónico
+							input.span10(type='email',required='required', id='txtEmail', name='txtEmail')
+							
+							label.label_form Contraseña
+							input.span10(type='password', required='required', id='txtPassword', name='txtPassword')
 
-						form
-							input.span12(type='text',placeholder='Título del mensaje', required='required', id='txtTitle2', name='txtTile2')
-							input.span12(type='email',placeholder='Título del mensaje', required='required', id='txtEmail2', name='txtEmail2')
-							textarea.span12(rows='10', id='txtMessage2', name='txtMessage2', placeholder='Mensaje', required='required')
-							button.btn.btn-info.btn-large(type='submit', id='btnRegistroUsuario') Enviar Mensaje
+							label.label_form Sexo
+							select.span4(id='cmbSexo', name='cmbSexo')
+								option(value='0', selected='selected') -- Seleccione -- 
+								option(value='H') Hombre 
+								option(value='M') Mujer
+								option(value='G') Gay
+							
+							label.label_form Ciudad
+							select.span4(id='cmbCiudad', name='cmbCiudad')
+								option(value='0', selected='selected') -- Seleccione --
+								each item in cities
+									option( value=item.id )= item.city
 
-					div.span5.offset1
-						h5 Conócenos
-						div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-phone(href='#')
-									i Phone
-							div.media-body.smallFontBy08
-								p teléfono de contacto
-						div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-place(href='#')
-									i Location
-							div.media-body.smallFontBy08
-								p Dirección a donde pueden llegar
-						div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-mail(href='#')
-									i Location
-							div.media-body.smallFontBy08
-								p email@printoo.mx
-						br 
-						br
-						br 
-						br 
-						div.social-icons.sicon-white.bordered
-							a.sicon-facebook(href='#')
-								i Facebook
-							a.sicon-twitter(href='#')
-								i Twitter
-							a.sicon-linkedin(href='#')
-								i LinkedIn
-							a.sicon-youtube(href='#')
-								i Youtube
-							a.sicon-pinterest(href='#')
-								i Pinterest
+							label Fecha de Nacimiento
+							select.span2(name='cmbDia', style='margin-right:10px')
+								option(value='0', selected='selected') Día
+								each day in days
+									option(value=day.value)= day.value
+
+							select.span3(name='cmbMes', style='margin-right:10px')
+								option(value='0', selected='selected') Mes
+								each month in months
+									option(value=month.id)= month.month
+							input.span3(name='txtAnio',placeholder='Año', onkeypress='Numeros(this);', style='vertical-align:top')
+							div.span12(style='margin-top:20px')
+								button.btn.btn-info.offset1(type='submit', id='btnRegistroUsuario', style="margin-right:20px") Registrarme
+								button.btn.btn-danger(type='submit', id='btnCancelarRegistro') Cancelar
+
+
+					div.span5.offset1.cls-form
+						h5.center.title-form Ingresar
+						form.offset1(method='POST')#user_login_form
+							
+							label.label_form Correo Electrónico
+							input.span10(type='email',required='required', id='txtLoginEmail', name='txtLoginEmail')
+							
+							label.label_form Contraseña
+							input.span10(type='password', required='required', id='txtLoginPassword', name='txtLoginPassword')
+
+							div.span12(style='margin-top:20px')
+								button.btn.btn-info.offset1(type='submit', id='btnLoginUsuario', style="margin-right:20px") Ingresar
+								button.btn.btn-danger(type='submit', id='btnCancelarLogin') Cancelar

@@ -220,3 +220,8 @@ $( document ).ajaxComplete(function() {
     });
 });
 
+
+function Numeros(evt){
+    var key = evt.keyCode ? evt.keyCode : evt.which;
+    return (key <= 40 || (key >= 48 && key <= 57));
+}

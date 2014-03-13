@@ -10,6 +10,36 @@
 /*
 *   PAGE | WELCOME
 */
+
+.title-form{
+  color: #2c3e50;
+  text-transform: none;
+  font-size: 28px;
+}
+
+.cls-form{
+  background-color:#ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius 5px;
+  padding: 10px;
+}
+
+.label_form{
+  font-size: 16px;
+}
+.register{
+  height: auto;
+  background: #2c3e50;
+  /*background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f9fe), color-stop(100%, #d6f0fd));
+  background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+  background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
+  background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);*/
+}
 .page-welcome {
   width: 100%;
   height: 100%;
@@ -174,15 +204,17 @@
   margin-bottom: 50px;
   display: none;
 }
-.portfolio-item-details .close-portfolio {
-  text-align: right;
+.portfolio-item-details .close-portfolio, .registro.close-portfolio {
+  text-align: center;
 }
-.portfolio-item-details .close-portfolio span {
-  border: 2px solid #292929;
-  color: #292929;
+.portfolio-item-details .close-portfolio span,
+.registro .close-portfolio span {
+  color: #333;
+  border: 2px solid #7f8c8d;
+  background-color: #ecf0f1;
   display: block;
   font-family: "Tahoma", Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   height: 25px;
   line-height: 1.1em;
@@ -198,8 +230,8 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  text-indent: -99999px;
-  background: url("/img/assets/css/cls.png") no-repeat center center;
+  /*text-indent: -99999px;*/
+  /*background: url("/img/assets/css/cls.png") no-repeat center center;*/
 }
 .portfolio-item-details .close-portfolio span:hover,
 .registro .close-portfolio span:hover {
@@ -607,17 +639,18 @@
 
 .page-contact form input[type='email'],
 .page-contact form input[type='text'] {
-  background-color: #fafafa;
-  color: #666666;
-  font-size: 0.8em;
+  background-color: #fff;
+  color: #333;
+  font-size: 15px;
+  height: 18px;
 }
 .page-contact form input[type='email']:focus,
 .page-contact form input[type='text']:focus {
   background-color: #fff;
 }
 .page-contact form textarea {
-  background-color: #fafafa;
-  color: #666666;
+  background-color: #fff;
+  color: #333;
   font-size: 0.8em;
 }
 .page-contact form textarea:focus {
@@ -1453,17 +1486,22 @@ a:hover {
 .white {
   color: #ffffff;
 }
+
+.black{
+  color: #333;
+}
 .black-bg {
   background-color: #292929;
+}
+
+.pages-bg{
+  background-color: #ecf0f1;
 }
 
 .turquei-bg{
   background: rgba(26,188,156,1);
 }
 
-.belize-bg{
-  background-color: #2980b9;
-}
 .row {
   margin-left: -21px;
   *zoom: 1;
@@ -1883,6 +1921,13 @@ h1,h2 {
   line-height: 81px;
   letter-spacing: 1px;
 }
+
+.div-title{
+  color: #ecf0f1;
+  font-size: 50px;
+  font-family: 'ChunkFiveRegular', 'Open Sans', sans-serif;
+  line-height: 30px;
+}
 /*h2 {
   font-size: 42.75px;
 }*/
@@ -2188,12 +2233,12 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 25px;
+  height: 18px;
   padding: 4px 6px;
   margin-bottom: 13.5px;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 27px;
-  color: #aaaaaa;
+  color: #333;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -6224,7 +6269,7 @@ a.badge:focus {
   box-shadow: inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15);
 }
 .progress-striped .bar {
-  background-color: #4e808e;
+  background-color: #3498db;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
