@@ -54,16 +54,15 @@
 
 .subscription{
   width: 100%;
-  height: 100%;
-  padding-top: 9%;
-  background: #2c3e50;
+  height: 78%;
+  padding-top: 7%;
+  background: #2980b9;
 }
 
 .container-subs{
-  color: #7f8c8d;
+  color: #3498db;
   border: 5px solid #7f8c8d;
   background-color: #ecf0f1;
-  line-height: 250px;
   margin: 0 auto;
   padding: 0;
   padding: 35px;
