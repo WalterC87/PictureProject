@@ -23,7 +23,9 @@ block content
 						li
 							a(href='#page-faqs') FAQ's
 						li
-							a(href='#page-contact') Contacto
+							a(href='#contact') Contacto
+						li
+							a(href='#') Ingresar
 					div.social-icons.hover-big.pull-right
 						a.sicon-facebook(href='#')
 							i Facebook
@@ -79,6 +81,10 @@ block content
 				p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
 			
 			article
+				div.center
+					img(src='/img/assets/video-img.jpg')
+
+			//-article
 				ul.thumbnails.plugin-filter-elements.portfolio-items
 					li.span4.branding.mix
 						a
@@ -99,13 +105,12 @@ block content
 							img(src='http://placehold.it/390x300' alt='paso 3')
 
 							div.portfolio-overlay
-								h4 Instrucciones Paso 3				
+								h4 Instrucciones Paso 3		-//		
 				
 	section#page-types.pages.white.paralax.page-features
 		div.overlay
 		div.container
 			header
-				h4.line-divider.white Empieza a Utilizar
 				h2 Printoo
 				div.row
 					div.span8.offset2
@@ -116,20 +121,51 @@ block content
 						img(src='/img/assets/pages/features/about01.png', alt='regístrate')
 						h5 Usuarios
 						p.smallFontBy08.cutBy10 Sube tus fotografías favoritas e imprímelas para compartirlos con tus amigos o seres queridos son recuerdos que perduran para siempre.
-						a.btn.btn-success.btn-large(href='#/registro/usuario', data-destination='page-features', data-insert='before') Suscríbete
+						a.btn.btn-success.btn-large(href='#/usuario', data-destination='page-features', data-insert='before') Suscríbete
 					div.span6.center
 						img(src='/img/assets/pages/features/about03.png', alt='anunciate con nosotros')
 						h5 Empresas
 						p.smallFontBy08.cutBy10 Anunciate con nosotros, aumenta tus ingresos, llega a más gente, crea una nueva experiencia de publicidad única y exclusiva.
-						a.btn.btn-info.btn-large(href='#/registro/empresa', data-destination='page-features', data-insert='before') Anúnciate
+						a.btn.btn-info.btn-large(href='#/empresa', data-destination='page-features', data-insert='before') Anúnciate
 
+	section#pages-clients.pages.page-clients
+		div.container
+			h4.line-divider-inline.center Empresas Aliadas
+			div#company-logos.row-fluid
+				ul.slides
+					li 
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
+					li 
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
+						div.span2.center
+							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
 
-	section#page-faqs.pages
+	//-section#page-faqs.pages
 		div.container
 			header
-				h4.line-divider FAQ's
+				h4.line-divider FAQ's-//
 
-	section.pages.black-bg.white.page-contact
+	section#contact.pages.black-bg.white.page-contact
 		div.container
 			header
 				h4.line-divider.white Contáctanos
@@ -184,11 +220,11 @@ block content
 								i Youtube
 							a.sicon-pinterest(href='#')
 								i Pinterest
-
-
-
 		div#map-image
 			img(src='/img/assets/pages/contact/map_bck.jpg', alt='Printoo')
+
+	section.copy-right.center
+		p © 2014 Printoo Todos los Derechos Reservados
 
 
 block scripts
