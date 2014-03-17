@@ -9,7 +9,7 @@ var routerController = function(app){
 		res.render('index');
 	})
 
-	app.get('/registro/usuario', function (req,res){
+	app.get('/usuario', function (req,res){
 		res.render('usuario',{
 			cities : CC,
 			months : MC,
@@ -17,7 +17,11 @@ var routerController = function(app){
 		});
 	})
 
-	app.get('/registro/empresa', function (req,res){
+	app.get('/success', function (req,res){
+		res.render('success',{message : 'Haz sido registrado en la Nueva Era de la Fotografia...'});
+	})
+
+	app.get('/empresa', function (req,res){
 		res.render('empresa');
 	})
 }

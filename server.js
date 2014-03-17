@@ -18,7 +18,9 @@ app.configure(function(){
 var port = process.env.PORT || 3000;
 
 var routerController = require('./app/router');
+var apiController = require('./app/controllers/api');
 routerController(app);
+apiController(app);
 
 server.listen(port, function(){
 	console.log("Listening on " + port);

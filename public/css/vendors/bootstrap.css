@@ -11,6 +11,17 @@
 *   PAGE | WELCOME
 */
 
+.page-work{
+  height: auto;
+}
+
+.copy-right{
+  background-color: #333;
+  color:#ecf0f1;
+  height: 30px;
+  padding: 10px;
+}
+
 .title-form{
   color: #2c3e50;
   text-transform: none;
@@ -39,6 +50,24 @@
   background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
   background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
   background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);*/
+}
+
+.subscription{
+  width: 100%;
+  height: 100%;
+  padding-top: 9%;
+  background: #2c3e50;
+}
+
+.container-subs{
+  color: #7f8c8d;
+  border: 5px solid #7f8c8d;
+  background-color: #ecf0f1;
+  line-height: 250px;
+  margin: 0 auto;
+  padding: 0;
+  padding: 35px;
+  width: 775px;
 }
 .page-welcome {
   width: 100%;
