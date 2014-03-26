@@ -138,7 +138,7 @@ $(document).ready(function(){
         useCss: false,
         pause: 4500
    })
-    
+   
     /**
     *   PAGE | WORK
     *
@@ -236,4 +236,8 @@ $( document ).ajaxComplete(function() {
 function Numeros(evt){
     var key = evt.keyCode ? evt.keyCode : evt.which;
     return (key <= 40 || (key >= 48 && key <= 57));
+}
+
+function userOptions(txt,opt){
+    txt.value = opt;
 }

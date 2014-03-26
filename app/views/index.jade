@@ -19,14 +19,15 @@ block content
 						li
 							a(href='#page-how-works') ¿Cómo funciona?
 						li
+							a(href='#') Ingresar
+						li
 							a(href='#page-types') ¡Quiero usarlo!
 						li
 							a(href='#page-faqs') FAQ's
 						li
 							a(href='#contact') Contacto
-						li
-							a(href='#') Ingresar
-					div.social-icons.hover-big.pull-right
+						
+					//--div.social-icons.hover-big.pull-right
 						a.sicon-facebook(href='#')
 							i Facebook
 						a.sicon-twitter(href='#')
@@ -62,52 +63,56 @@ block content
 								li
 									h2 Comparte tus fotos con tus amigos
 						p La nueva forma de imprimir tus fotografías.
-						div.social-icons.sicon-white.bordered
-							a.sicon-facebook(href='#')
-								i Facebook
-							a.sicon-twitter(href='#')
-								i Twitter
-							a.sicon-linkedin(href='#')
-								i LinkedIn
-							a.sicon-youtube(href='#')
-								i Youtube
-							a.sicon-pinterest(href='#')
-								i Pinterest
+						div#social-welcome.social-printoo(style="margin-top: 25px")
+							ul
+								li
+									a.printoo-apple(href='#')
+								li
+									a.printoo-facebook(href='#')
+								li
+									a.printoo-instagram(href='#')
+								li
+									a.printoo-youtube(href='#')
+								li
+									a.printoo-twitter(href='#')
+								li
+									a.printoo-pinterest(href='#')
+								li
+									a.printoo-vimeo(href='#')
 
-	section#page-how-works.pages.page-work
+	section#page-how-works.page-work(style='height:auto')
 		div.container
 			header
 				h4.line-divider Como Funciona
 				p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
-			
-			article
-				div.center
-					img(src='/img/assets/video-img.jpg')
 
-			//-article
+			article
 				ul.thumbnails.plugin-filter-elements.portfolio-items
-					li.span4.branding.mix
+					li.span4.branding
 						a
 							img(src='http://placehold.it/390x300' alt='paso 1')
 
-							div.portfolio-overlay
+							div
 								h4 Instrucciones Paso 1
 
-					li.span4.branding.mix
+					li.span4.branding
 						a
 							img(src='http://placehold.it/390x300' alt='paso 2')
 
-							div.portfolio-overlay
+							div
 								h4 Instrucciones Paso 2
 
-					li.span4.branding.mix
+					li.span4.branding
 						a
 							img(src='http://placehold.it/390x300' alt='paso 3')
 
-							div.portfolio-overlay
-								h4 Instrucciones Paso 3		-//		
+							div
+								h4 Instrucciones Paso 3
+			article
+				div
+					img(src='/img/assets/video-img.jpg')
 				
-	section#page-types.pages.white.paralax.page-features
+	section#page-types.pages.white.paralax.page-features(style='height:auto; padding-bottom:50px')
 		div.overlay
 		div.container
 			header
@@ -128,7 +133,9 @@ block content
 						p.smallFontBy08.cutBy10 Anunciate con nosotros, aumenta tus ingresos, llega a más gente, crea una nueva experiencia de publicidad única y exclusiva.
 						a.btn.btn-info.btn-large(href='#/empresa', data-destination='page-features', data-insert='before') Anúnciate
 
-	section#pages-clients.pages.page-clients
+
+
+	section#pages-clients.pages.page-clients(style='height:auto')
 		div.container
 			h4.line-divider-inline.center Empresas Aliadas
 			div#company-logos.row-fluid
@@ -165,18 +172,18 @@ block content
 			header
 				h4.line-divider FAQ's-//
 
-	section#contact.pages.black-bg.white.page-contact
+	section#contact.pages.black-bg.white.page-contact(style='height:auto')
 		div.container
 			header
-				h4.line-divider.white Contáctanos
-				h2 Visítanos o Llámanos
+				h4.line-divider.white Contacto
+				//--h2 Visítanos o Llámanos
 				div.row
 					div.span10.offset1
 						p Nos gusta compartir con nuestros usuarios y con nuestros clientes. Siéntente con la confianza necesaria para escribirnos tu consulta o puedes pasar a visitarnos sin ningún compromiso.
 					
 			article
 				div.row-fluid
-					div.span6
+					//--div.span6
 						h5 Déjanos un mensaje
 
 						form
@@ -185,15 +192,15 @@ block content
 							textarea.span12(rows='10', id='txtMessage', name='txtMessage', placeholder='Mensaje', required='required')
 							button.btn.btn-info.btn-large(type='submit', id='btnEnviar') Enviar Mensaje
 
-					div.span5.offset1
-						h5 Conócenos
-						div.media
+					div.span2.offset2
+						h5 Escríbenos
+						//--div.media
 							div.social-icons.sicon-white.pull-left
 								a.sicon-phone(href='#')
 									i Phone
 							div.media-body.smallFontBy08
 								p teléfono de contacto
-						div.media
+						//--div.media
 							div.social-icons.sicon-white.pull-left
 								a.sicon-place(href='#')
 									i Location
@@ -204,34 +211,37 @@ block content
 								a.sicon-mail(href='#')
 									i Location
 							div.media-body.smallFontBy08
-								p email@printoo.mx
-						br 
-						br
-						br 
-						br 
-						div.social-icons.sicon-white.bordered
-							a.sicon-facebook(href='#')
-								i Facebook
-							a.sicon-twitter(href='#')
-								i Twitter
-							a.sicon-linkedin(href='#')
-								i LinkedIn
-							a.sicon-youtube(href='#')
-								i Youtube
-							a.sicon-pinterest(href='#')
-								i Pinterest
+								p hola@printoo.mx
+					div.span8
+						div#social-contact.social-printoo(style="margin-top: 25px")
+							ul
+								li
+									a.printoo-apple(href='#')
+								li
+									a.printoo-facebook(href='#')
+								li
+									a.printoo-instagram(href='#')
+								li
+									a.printoo-youtube(href='#')
+								li
+									a.printoo-twitter(href='#')
+								li
+									a.printoo-pinterest(href='#')
+								li
+									a.printoo-vimeo(href='#')
 		div#map-image
 			img(src='/img/assets/pages/contact/map_bck.jpg', alt='Printoo')
 
 	section.copy-right.center
-		p © 2014 Printoo Todos los Derechos Reservados
+		p © 
+			small 2014 Printoo Todos los Derechos Reservados
 
 
 block scripts
 	script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 	script(type='text/javascript', src='/js/vendors/jquery.min.js')
 	script(type='text/javascript', src='/js/vendors/bootstrap.min.js')
-	script(type='text/javascript', src='/js/vendors/jquery.bxslider.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.bxslider.js')
 	script(type='text/javascript', src='/js/vendors/jquery.centralized.min.js')
 	script(type='text/javascript', src='/js/vendors/jquery.fixedonlater.min.js')
 	script(type='text/javascript', src='/js/vendors/jquery.hashloader.min.js')

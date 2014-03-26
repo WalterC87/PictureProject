@@ -33,7 +33,41 @@ var apiController = function(app){
 							result : 'success',
 							err    : '',
 							//fields : fields,
-							json   : rows,
+							cities   : rows,
+							length : rows.length,
+						})
+					}
+					conn.release();
+				});
+			}
+		});
+	});
+
+	app.get('/registro/usuarios/:tipoUsuario', function (req,res){
+		var idTipoUsuario = req.params.tipoUsuario;
+		res.setHeader('Content-Type', 'application/json');
+		connection.getConnection(function (err,conn){
+			if(err){
+				console.log(err);
+				res.statusCode = 503;
+				res.send({
+					result : 'error',
+					err: err.code
+				});
+			}else{
+				conn.query('SELECT * FROM usuario WHERE idTipoUsuario = '+idTipoUsuario+' AND estado = 1', function (err,rows,fields){
+					if(err){
+						console.log(err);
+						res.statusCode = 500;
+						res.send({
+							result : 'error',
+							err : err.code
+						});
+					}else{
+						res.send({
+							result : 'success',
+							err    : '',
+							users  : rows,
 							length : rows.length,
 						})
 					}
@@ -80,13 +114,13 @@ var apiController = function(app){
 
 	app.post('/registro/usuario', function (req,res){
 		console.log('POST Usuarios');
-		debugger;
+		//debugger;
 		tipoUsuario = 2;
 		nombre = req.body.txtNombre;
 		email = req.body.txtEmail;
 		password = req.body.txtPassword;
-		sexo = req.body.cmbSexo;
-		ciudad = req.body.cmbCiudad;
+		sexo = req.body.txtGeneroUsuario;
+		ciudad = req.body.txtCiudadUsuario;
 		nacimiento = req.body.txtAnio + '-' + req.body.cmbMes + '-' + req.body.cmbDia;
 		estado = 1;
 
