@@ -1,53 +1,59 @@
-section.pages.register.black.page-contact.registro
-		div.container
-			header
-				div.close-portfolio.pull-right
-					span x
-					div.clearfix
-				//-h4.line-divider.white Registro de Empresas
-				p.div-title Anunciate con nosotros!!
-				
-			article
-				div.row-fluid
-					div.span6.cls-form
-						h5.center.title-form Únete
+extends layout
 
-						form.offset1(method='POST', action='/registro/empresa')#user_register_form
-							label.label_form Marca
-							input.span10(type='text',required='required', id='txtNombre', name='txtNombre')
-							
-							label.label_form Contacto
-							input.span10(type='text',required='required', id='txtContacto', name='txtContacto')
+block content
+	section.pages.register.black.page-contact.registro
+			div.container
+				header
+					div.close-portfolio.pull-right
+						a(href='/') « regresar
+						div.clearfix
+					//-h4.line-divider.white Registro de Empresas
+					p.div-title Anunciate con nosotros!!
+					
+				article
+					div.row-fluid
+						div.span6.cls-form
+							h5.center.title-form Únete
 
-							label.label_form Teléfono
-							input.span10(type='text',required='required', id='txtTelefono', name='txtTelefono')
+							form.offset1(method='POST', action='/registro/empresa')#user_register_form
+								label.label_form Marca
+								input.span10(type='text',required='required', id='txtNombre', name='txtNombre')
+								
+								label.label_form Contacto
+								input.span10(type='text',required='required', id='txtContacto', name='txtContacto')
 
-							label.label_form Correo Electrónico
-							input.span10(type='email',required='required', id='txtEmail', name='txtEmail')
-							
-							label.label_form Contraseña
-							input.span10(type='password', required='required', id='txtPassword', name='txtPassword')
+								label.label_form Teléfono
+								input.span10(type='text',required='required', id='txtTelefono', name='txtTelefono')
 
-							div.span12(style='margin-top:20px')
-								button.btn.btn-info.offset1(type='submit', id='btnRegistroUsuario', style="margin-right:20px") Unirme
-								button.btn.btn-danger(type='submit', id='btnCancelarRegistro') Cancelar
+								label.label_form Correo Electrónico
+								input.span10(type='email',required='required', id='txtEmail', name='txtEmail')
+								
+								label.label_form Contraseña
+								input.span10(type='password', required='required', id='txtPassword', name='txtPassword')
 
-					div.span5.offset1.cls-form
-						h5.center.title-form Ingresar
-						form.offset2(method='POST')#user_login_form
-							label.label_form Correo Electrónico
-							div.input-prepend
-								span.add-on
-									i.icon-envelope
-								input.span12(type='email',required='required', id='txtLoginEmail', name='txtLoginEmail')
-							
-							label.label_form Contraseña
-							div.input-prepend
-								span.add-on
-									i.icon-lock
-								input.span10(type='password', required='required', id='txtLoginPassword', name='txtLoginPassword')
+								div.span12(style='margin-top:20px')
+									button.btn.btn-info.offset1(type='submit', id='btnRegistroUsuario', style="margin-right:20px") Unirme
+									button.btn.btn-danger(type='submit', id='btnCancelarRegistro') Cancelar
 
-							div.span12(style='margin-top:20px')
-								button.btn.btn-info.offset1(type='submit', id='btnLoginUsuario', style="margin-right:20px") Ingresar
-								button.btn.btn-danger(type='submit', id='btnCancelarLogin') Cancelar
-						
+						div.span5.offset1.cls-form
+							h5.center.title-form Ingresar
+							form.offset2(method='POST')#user_login_form
+								label.label_form Correo Electrónico
+								div.input-prepend
+									span.add-on
+										i.icon-envelope
+									input.span12(type='email',required='required', id='txtLoginEmail', name='txtLoginEmail')
+								
+								label.label_form Contraseña
+								div.input-prepend
+									span.add-on
+										i.icon-lock
+									input.span10(type='password', required='required', id='txtLoginPassword', name='txtLoginPassword')
+
+								div.span12(style='margin-top:20px')
+									button.btn.btn-info.offset1(type='submit', id='btnLoginUsuario', style="margin-right:20px") Ingresar
+									button.btn.btn-danger(type='submit', id='btnCancelarLogin') Cancelar
+block scripts
+	script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+	script(type='text/javascript', src='/js/vendors/jquery.min.js')			
+	script(type='text/javascript', src='/js/application.js')

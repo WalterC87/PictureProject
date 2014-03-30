@@ -191,7 +191,7 @@
   width: 100%;
   height: 100%;
   top: 0;
-  left: -100%;
+  bottom: -100%;
   position: absolute;
   display: block;
   z-index: 4;
@@ -240,22 +240,23 @@
   text-align: center;
 }
 .portfolio-item-details .close-portfolio span,
-.registro .close-portfolio span {
+.registro .close-portfolio span, 
+.registro .close-portfolio a {
   color: #333;
   border: 2px solid #7f8c8d;
   background-color: #ecf0f1;
   display: block;
   font-family: "Tahoma", Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  height: 25px;
+  height:20px;
   line-height: 1.1em;
   padding: 5px;
   text-align: center;
   text-decoration: none;
   text-indent: 1px;
-  text-transform: uppercase;
-  width: 25px;
+  text-transform: none;
+  width: auto;
   float: right;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -266,7 +267,8 @@
   /*background: url("/img/assets/css/cls.png") no-repeat center center;*/
 }
 .portfolio-item-details .close-portfolio span:hover,
-.registro .close-portfolio span:hover {
+.registro .close-portfolio span:hover,
+.registro .close-portfolio a:hover {
   opacity: 0.5;
   cursor: pointer;
 }

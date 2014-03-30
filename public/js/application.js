@@ -1,4 +1,16 @@
 $(document).ready(function(){
+
+    $.ajax({
+        type : 'GET',
+        url  : '//127.0.0.1:3000/cities',
+        //dataType : 'jsonp'    
+    })
+
+    .done(function(data){
+        data.cities.forEach(function (item){
+            $("<option value=" + item.idciudad +">" +item.descripcion+ "</option>" ).appendTo("#cmbOtros"); 
+        })
+    })   
     /**
     *   Global variables.
     */
