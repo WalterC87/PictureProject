@@ -4,8 +4,6 @@ block content
 	nav#navigation.fixed-top
 		div.container
 			div.row-fluid
-
-
 				div.span12.center
 					a.brand.pull-left(href='./')
 						img(src='/img/assets/printoo-beta.png', alt='Printoo', width='143')
@@ -15,104 +13,104 @@ block content
 						span.icon-bar
 					ul#main-menu.nav-collapse.collapse
 						li
-							a(href='#page-welcome') Home
+							a(href='#page-how-works') como funciona
 						li
-							a(href='#page-how-works') ¿Cómo funciona?
-						li
-							a(href='#') Ingresar
-						li
-							a(href='#page-types') ¡Quiero usarlo!
-						li
-							a(href='#page-faqs') FAQ's
+							a(href='#registro') registro
 						li
 							a(href='#contact') Contacto
-						
-					//--div.social-icons.hover-big.pull-right
-						a.sicon-facebook(href='#')
-							i Facebook
-						a.sicon-twitter(href='#')
-							i Twitter
-						a.sicon-linkedin(href='#')
-							i LinkedIn
-						a.sicon-youtube(href='#')
-							i Youtube
-						a.sicon-pinterest(href='#')
-							i Pinterest 
 
-	section#page-welcome.pages.white.paralax.page-welcome
-		div.overlay
-		div.centralized
-			div.container
-				div.row-fluid
-					div.span12.center
-						div.logo
-							div.scrollNormal
-								a(href='#page-how-works')
-									img(src='/img/assets/demo_logo.png', width='130' height='130' alt='Printoo')
-							div.scrollDown
-								a(href='#page-how-works')
-									img(src='/img/assets/pages/welcome/logo2_welcome.png', width='140' height='140' alt='Printoo')
-						div#welcome-messages.line-divider
-							ul.slides
-								li
-									h1 Bienvenidos a Printoo
-								li
-									h2 Fresh &amp; clean
-								li
-									h2 Crea, Imprime y Diviértete
-								li
-									h2 Comparte tus fotos con tus amigos
-						p La nueva forma de imprimir tus fotografías.
-						div#social-welcome.social-printoo(style="margin-top: 25px")
-							ul
-								li
-									a.printoo-apple(href='#')
-								li
-									a.printoo-facebook(href='#')
-								li
-									a.printoo-instagram(href='#')
-								li
-									a.printoo-youtube(href='#')
-								li
-									a.printoo-twitter(href='#')
-								li
-									a.printoo-pinterest(href='#')
-								li
-									a.printoo-vimeo(href='#')
+	section#page-welcome.pages.paralax.page-welcome
+		//--div.overlay
+		div(style='width:100%; height:100%')
+			section#info-portada
+				div#content-info
+					figure
+						img(src='/img/portada/emblema.png')
+					div#texto-info
+						p.texto-info
+							| Manda a imprimir desde tu celular <br/> las fotos de
+						ul.slides
+							li
+								p.options-info tus hijos
+							li
+								p.options-info la fiesta
+							li
+								p.options-info tu mascota
+							li
+								p.options-info el viaje
+							li
+								p.options-info tu novio
+							li
+								p.options-info tu novia
+							li
+								p.options-info tus vacaciones
+							li
+								p.options-info Facebook
+							li
+								p.options-info Instagram
+							li
+								p.options-info tu celular
+							li
+								p.options-info tu graduación
+							li
+								p.options-info la boda
+						p.texto-info
+							| ¿Te gustaría imprimir tus fotos, pero <br/> sólo con pensar en ir y esperar <br/> terminas por nunca hacerlo?
+
+			section#fotos-portada
+				div.foto1
+					figure
+						img(src='/img/portada/baby.png')
+				div.foto2
+					figure
+						img(src='/img/portada/landscapefinal.jpg')
+				div.foto3
+					figure
+						img(src='/img/portada/crowdcool.jpg')
+				div.foto4
+					figure
+						img(src='/img/portada/dogtoy.jpg')
 
 	section#page-how-works.page-work(style='height:auto')
 		div.container
 			header
-				h4.line-divider Como Funciona
-				p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
+				h4 ¿Cómo funciona?
+				p.texto 
+					strong
+						| Printoo 
+					| te ayuda a decirle adiós a la frustración de ir a imprimir o intentar imprimir tus fotos con una impresora casera.
 
 			article
 				ul.thumbnails.plugin-filter-elements.portfolio-items
 					li.span4.branding.mix
 						a
-							img(src='http://placehold.it/390x300' alt='paso 1')
+							img(src='/img/funciona/selecciona.png' alt='selecciona tus fotos')
 
-							div.portfolio-overlay
-								h4 Instrucciones Paso 1
+						h5 1 - Selecciona
 
-					li.span4.branding.mix
-						a
-							img(src='http://placehold.it/390x300' alt='paso 2')
+						p.texto
+							| Escoge desde cualquier <br> dispositivo y de cualquier <br> red social 5, 10 ó 20 de tus fotos.
 
-							div.portfolio-overlay
-								h4 Instrucciones Paso 2
 
 					li.span4.branding.mix
 						a
-							img(src='http://placehold.it/390x300' alt='paso 3')
+							img(src='/img/funciona/recibela.png' alt='recibe tus fotos')
 
-							div.portfolio-overlay
-								h4 Instrucciones Paso 3
-			article
-				div
-					img(src='/img/assets/video-img.jpg')
+						h5 2 - Recíbelas
+
+						p.texto
+							| Recíbelas o envíalas como <br> regalo a cualquier ciudad <br> dentro de México.							
+
+					li.span4.branding.mix
+						a
+							img(src='/img/funciona/gratis.png' alt='Gratis')
+
+						h5 3 - ¡Gratis!
+
+						p.texto
+							| No pagas nada porque tus fotos <br> tienen publicidad no inmasiva <br> en la parte trasera.
 				
-	section#page-types.pages.white.paralax.page-features(style='height:auto; padding-bottom:50px')
+	section#registro.pages.white.paralax.page-features(style='height:auto; padding-bottom:50px')
 		div.overlay
 		div.container
 			header
@@ -132,43 +130,6 @@ block content
 						h5 Empresas
 						p.smallFontBy08.cutBy10 Anunciate con nosotros, aumenta tus ingresos, llega a más gente, crea una nueva experiencia de publicidad única y exclusiva.
 						a.btn.btn-info.btn-large(href='/empresa', data-destination='page-features', data-insert='before') Anúnciate
-
-	section#pages-clients.pages.page-clients(style='height:auto')
-		div.container
-			h4.line-divider-inline.center Empresas Aliadas
-			div#company-logos.row-fluid
-				ul.slides
-					li 
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/16a085/ffffff&text=Grupo+1" alt="Empresas Aliadas")
-					li 
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-						div.span2.center
-							img(src="http://placehold.it/180x70/2980b9/ffffff&text=Grupo+2" alt="Empresas Aliadas")
-
-	//-section#page-faqs.pages
-		div.container
-			header
-				h4.line-divider FAQ's-//
 
 	section#contact.pages.black-bg.white.page-contact(style='height:auto')
 		div.container

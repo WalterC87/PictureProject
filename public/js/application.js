@@ -1,3 +1,18 @@
+var sticky = document.querySelector('#navigation');
+//var origOffsetY = sticky.offsetTop;
+var origOffsetY = 240;
+
+function onScroll(e) {
+    if( window.scrollY >= origOffsetY){
+        //debugger;
+        sticky.classList.add('fixed')
+    }else{
+        sticky.classList.remove('fixed');
+    }
+}
+
+document.addEventListener('scroll', onScroll);
+
 $(document).ready(function(){
 
     $.ajax({
@@ -35,14 +50,14 @@ $(document).ready(function(){
     $(window).trigger('scroll');
     
     /* Fix navigation. */
-    $('#navigation').fixedonlater({
+    /*$('#navigation').fixedonlater({
         speedDown: 250,
         speedUp: 100
-    });
+    });*/
     
     /* Centralize elements on page. */
     $('.centralized').centralized({
-        delay: 1500,
+        delay: 0,
         fadeSpeed: 500
     });
     
@@ -127,7 +142,7 @@ $(document).ready(function(){
     *
     *   Initialize slider for welcome page H1 message.
     */
-   $('#welcome-messages ul').bxSlider({
+   $('#texto-info ul.slides').bxSlider({
         mode: 'horizontal',
         auto: true,
         minSlides: 1,
@@ -136,7 +151,7 @@ $(document).ready(function(){
         pager: false,
         controls: false,
         useCSS: false,
-        pause: 4500
+        pause: 2500
     });
 
    $('#company-logos ul').bxSlider({
@@ -213,14 +228,13 @@ $(document).ready(function(){
 *   Start loading.
 *   Append loading notification.
 */
-$( document ).ajaxSend( function() {
-    /* Show loader. */
+/*$( document ).ajaxSend( function() {
     if($(".loading").length == 0) {
         $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
         $(".loading").slideDown();
         $(".loading .progress .bar").delay(300).css("width", "100%");
     }
-});
+});*/
 
 /**
 *   Reinitialize Scrollspy after ajax request is completed.
