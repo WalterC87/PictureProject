@@ -222,47 +222,44 @@ block content
 							span.usuario-test Innovator developer y founder  
 							a.enlace-test(href='http://www.innomobs.com', target='_blank') Innomobs
 
-	section#contact.pages.black-bg.white.page-contact(style='height:auto')
+	section#contact.pages.page-contact(style='height:auto')
 		div.container
-			header
-				h4.line-divider.white Contacto
-				//--h2 Visítanos o Llámanos
-				div.row
-					div.span10.offset1
-						p Nos gusta compartir con nuestros usuarios y con nuestros clientes. Siéntente con la confianza necesaria para escribirnos tu consulta o puedes pasar a visitarnos sin ningún compromiso.
-					
 			article
 				div.row-fluid
-					//--div.span6
-						h5 Déjanos un mensaje
-
-						form
-							input.span12(type='text',placeholder='Título del mensaje', required='required', id='txtTitle', name='txtTile')
-							input.span12(type='email',placeholder='Título del mensaje', required='required', id='txtEmail', name='txtEmail')
-							textarea.span12(rows='10', id='txtMessage', name='txtMessage', placeholder='Mensaje', required='required')
-							button.btn.btn-info.btn-large(type='submit', id='btnEnviar') Enviar Mensaje
-
-					div.span2.offset2
-						h5 Escríbenos
-						//--div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-phone(href='#')
-									i Phone
-							div.media-body.smallFontBy08
-								p teléfono de contacto
-						//--div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-place(href='#')
-									i Location
-							div.media-body.smallFontBy08
-								p Dirección a donde pueden llegar
-						div.media
-							div.social-icons.sicon-white.pull-left
-								a.sicon-mail(href='#')
-									i Location
-							div.media-body.smallFontBy08
-								p hola@printoo.mx
-					div.span8
+					div.span3
+						figure.span12(style='margin-top: 20%')
+							img(src='/img/contacto/logo.png', alt='Printoo', title='Printoo')
+						p.span12.center.copy-right © 
+							small Todos los Derechos Reservados
+					div.span3
+						div.span12
+							p.pub-marca.center ¿Eres un marca y te interesa <br/> nuestra publicidad? ¿Quieres <br/> darnus tu opinión o saber más?
+						div.span12
+							table
+								tr
+									td
+										figure.span12
+											img(src='/img/contacto/Mail.png', alt='Printoo mail', title='Printoo mail')
+									td
+										h5.span12 WE LOVE MAIL!
+										p.correo.span12 hola@printoo.me
+					div.span3
+						h5.span12.center SOMOS SOCIALES
+						div#social-contact.social-printoo.center
+							ul
+								li
+									a(href='#')
+										img(src='/img/contacto/facebook.png')
+								li
+									a(href='#')
+										img(src='/img/contacto/twitter.png')
+						div.span12
+							h6.span12.center POLÍTICA DE PRIVACIDAD
+							p.politica.span12 Además de nuestra política de privacidad, en Üprintoo creemos en que México puede ser diferente; nosotros apotamos al cambio NO siendo corruptos, haciendo las cosas bien hechas y aspiramos a ser mejores cada día.
+					div.span3(style='margin-top: 4%')
+						h4.span12 CONTÁCTANOS
+						p.contact.sapn12 Nos gusta saber sobre nuestros clientes, queresmos escuchar tus sugerencias y comentarios, no dudes en contáctarnos.
+					//--div.span8
 						div#social-contact.social-printoo(style="margin-top: 25px")
 							ul
 								li
@@ -279,10 +276,10 @@ block content
 									a.printoo-pinterest(href='#')
 								li
 									a.printoo-vimeo(href='#')
-		div#map-image
+		//--div#map-image
 			img(src='/img/assets/pages/contact/map_bck.jpg', alt='Printoo')
 
-	section.copy-right.center
+	//--section.copy-right.center
 		p © 
 			small 2014 Printoo Todos los Derechos Reservados
 
