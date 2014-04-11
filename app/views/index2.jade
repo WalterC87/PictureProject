@@ -71,7 +71,7 @@ block content
 					figure
 						img(src='/img/portada/dogtoy.jpg')
 
-	section#page-how-works.page-work(style='height:auto')
+	section#page-how-works.page-work(style='height:85%')
 		div.container
 			header
 				h4 ¿Cómo funciona?
@@ -83,8 +83,8 @@ block content
 			article
 				ul.thumbnails.plugin-filter-elements.portfolio-items
 					li.span4.branding.mix
-						a
-							img(src='/img/funciona/selecciona.png' alt='selecciona tus fotos')
+						a.seleccion
+							//--img(src='/img/funciona/selecciona.png' alt='selecciona tus fotos')
 
 						h5 1 - Selecciona
 
@@ -93,8 +93,8 @@ block content
 
 
 					li.span4.branding.mix
-						a
-							img(src='/img/funciona/recibela.png' alt='recibe tus fotos')
+						a.regalar
+							//--img(src='/img/funciona/recibela.png' alt='recibe tus fotos')
 
 						h5 2 - Recíbelas
 
@@ -102,34 +102,125 @@ block content
 							| Recíbelas o envíalas como <br> regalo a cualquier ciudad <br> dentro de México.							
 
 					li.span4.branding.mix
-						a
-							img(src='/img/funciona/gratis.png' alt='Gratis')
+						a.recibir
+							//--img(src='/img/funciona/gratis.png' alt='Gratis')
 
 						h5 3 - ¡Gratis!
 
 						p.texto
 							| No pagas nada porque tus fotos <br> tienen publicidad no inmasiva <br> en la parte trasera.
-				
-	section#registro.pages.white.paralax.page-features(style='height:auto; padding-bottom:50px')
-		div.overlay
+	div.separate			
+	section#registro.pages.white.paralax.page-features(style='height:auto; padding-bottom:65px')
+		//--div.overlay
 		div.container
 			header
-				h2 Printoo
-				div.row
+				h4 Registro
+				//--div.row
 					div.span8.offset2
 						p Cheesecake sweet bonbon pie. Caramels marshmallow biscuit bear claw jelly beans. Jelly beans jelly cupcake muffin marzipan caramels candy canes gummi bears croissant. Jelly-o wafer cheesecake tootsie roll.
 			article
 				div.row-fluid
-					div.span6.center
-						img(src='/img/assets/pages/features/about01.png', alt='regístrate')
-						h5 Usuarios
-						p.smallFontBy08.cutBy10 Sube tus fotografías favoritas e imprímelas para compartirlos con tus amigos o seres queridos son recuerdos que perduran para siempre.
-						a.btn.btn-success.btn-large(href='/usuario', data-destination='page-features', data-insert='before') Suscríbete
-					div.span6.center
-						img(src='/img/assets/pages/features/about03.png', alt='anunciate con nosotros')
-						h5 Empresas
-						p.smallFontBy08.cutBy10 Anunciate con nosotros, aumenta tus ingresos, llega a más gente, crea una nueva experiencia de publicidad única y exclusiva.
-						a.btn.btn-info.btn-large(href='/empresa', data-destination='page-features', data-insert='before') Anúnciate
+					div.span6
+						div.span10.offset1
+							h4.span6 Hola, <br/> bienvenido.
+							div.span6.flecha
+
+					div.span11
+						form.form-horizontal(method='POST', action='/registro/usuario', name='user_register_form')#user_register_form
+							div.span6(style='background-color:transparent;')
+								div.control-group
+									label.label_form.control-label Me llamo:
+									div.controls
+										input.span10(type='text',required='required', id='txtNombre', name='txtNombre')
+								div.control-group
+									label.label_form.control-label Mi correo:
+									div.controls
+										input.span10(type='email',required='required', id='txtEmail', name='txtEmail')
+								div.control-group
+									label.label_form.control-label Mi contraseña:
+									div.controls
+										input.span10(type='password', required='required', id='txtPassword', name='txtPassword')
+								div.control-group
+									label.label_form.control-label Soy:
+									div.controls
+										div.usuario-options
+											input(type='hidden', id='txtGeneroUsuario', name='txtGeneroUsuario', value="0")
+											ul 
+												li.hombre(onclick='userOptions(txtGeneroUsuario,"H")')
+													//--img.img-circle(src='/img/circles/hombre.png', onclick='userOptions(txtGeneroUsuario,"H")')
+												li.mujer(onclick='userOptions(txtGeneroUsuario,"M")')
+													//--img.img-circle(src='/img/circles/mujer.png', onclick='userOptions(txtGeneroUsuario,"M")')
+												li.gay(onclick='userOptions(txtGeneroUsuario,"G")')
+													//--img.img-circle(src='/img/circles/gay.png', onclick='userOptions(txtGeneroUsuario,"G")')										
+								div.control-group
+									label.label_form.control-label Vivo en:
+									div.controls
+										input.span10(type='text', required='required', id='txtCiudad', name='txtCiudad')
+							div.span6
+								div.control-group
+									label.label_form.control-label Estado:
+									div.controls
+										div.usuario-options
+											input(type='hidden', id='txtCiudadUsuario', name='txtCiudadUsuario', value="0")
+											ul 
+												li.mty(onclick='userOptions(txtCiudadUsuario,"2")')
+													//--img.img-circle(src='/img/circles/df.png', onclick='userOptions(txtCiudadUsuario,"2")')
+												li.gdl(onclick='userOptions(txtCiudadUsuario,"4")')
+													//--img.img-circle(src='/img/circles/gdl.png', onclick='userOptions(txtCiudadUsuario,"4")')
+												li.df(onclick='userOptions(txtCiudadUsuario,"1")')
+													//--img.img-circle(src='/img/circles/mty.png', onclick='userOptions(txtCiudadUsuario,"1")')
+												li.pue(onclick='userOptions(txtCiudadUsuario,"3")')
+													//--img.img-circle(src='/img/circles/pue.png', onclick='userOptions(txtCiudadUsuario,"3")')
+								div.control-group
+									label.label_form.control-label Otro:
+									div.controls
+										select.span7(id='cmbOtros', name='cmbOtros')
+											option(value='0', selected='selected') -- Otros --
+								div.control-group
+									label.label_form.control-label Cumplo años el:
+									div.controls
+										select.span3(name='cmbDia', style='margin-right:10px')
+											option(value='0', selected='selected') Día
+											each day in days
+												option(value=day.value)= day.value
+										select.span5(name='cmbMes', style='margin-right:10px')
+											option(value='0', selected='selected') Mes
+											each month in months
+												option(value=month.id)= month.month
+										input.span3(name='txtAnio',placeholder='Año', onkeypress='Numeros(this);', style='vertical-align:top')
+								div.span12(style='margin-top:20px')
+									a.offset6.submit(href='#')
+										img(src='/img/registro/registrar.png')
+									//--button.btn.btn-info.offset8(type='submit', id='btnRegistroUsuario', style="margin-right:20px") Registrarme
+
+	section#pages-clients.pages.page-clients(style='height:auto')
+		div.container.center
+			div.row-fluid
+				ul.slides
+					li
+						p.testimonio.span12
+							| “Mis mejores momentos toman un nuevo sentido. ¡Fascinante!” 
+							span.usuario-test  Miguel Ramirez, CEO y Co-founder 
+							a.enlace-test(href='http://www.claseteca.com/', target='_blank') Claseteca.com
+
+					//--li
+						p.testimonio.span12
+							| “Si hubiera existido Printoo en mis últimas vacaciones me hubiera ahorrado las postales que compré y que nunca envíe.”  
+							span.usuario-test  Rudy Laddaga CEO y Co-founder  
+							a.enlace-test(href='http://www.favoritoys.com/en/', target='_blank') Favoritoys
+
+					//--li
+						p.testimonio.span12
+							| “¡Una propuesta tan sencilla y fácil de usar como uPrintoo hacía falta!”   
+							span.usuario-test  Jorge Camargo Founder  
+							a.enlace-test(href='http://www.elcowork.com/', target='_blank')  El Cowork
+
+					li
+						p.testimonio.span12
+							| “¡Lo que Kodak nunca hizo!”   
+							a.enlace-test(href='https://twitter.com/Musequisamuse', target='_blank') Jessica Gonzalez 
+							span.usuario-test Innovator developer y founder  
+							a.enlace-test(href='http://www.innomobs.com', target='_blank') Innomobs
 
 	section#contact.pages.black-bg.white.page-contact(style='height:auto')
 		div.container

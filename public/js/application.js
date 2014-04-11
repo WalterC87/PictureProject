@@ -17,15 +17,28 @@ $(document).ready(function(){
 
     $.ajax({
         type : 'GET',
-        url  : '//127.0.0.1:3000/cities',
-        //dataType : 'jsonp'    
+        //url  : '//127.0.0.1:3000/cities',
+        url  : '//162.243.96.184/:3000/cities',
+        dataType : 'jsonp'    
     })
 
     .done(function(data){
         data.cities.forEach(function (item){
             $("<option value=" + item.idciudad +">" +item.descripcion+ "</option>" ).appendTo("#cmbOtros"); 
         })
-    })   
+    }) 
+
+    $('.submit').mouseover(function(){
+        $(this).children().attr('src','/img/registro/registrar_click.png')
+    }); 
+
+    $('.submit').mouseout(function(){
+        $(this).children().attr('src','/img/registro/registrar.png')
+    });
+
+    /*$('.submit').on('click',function(){
+        document.forms['user_register_form'].submit();
+    }); */
     /**
     *   Global variables.
     */
@@ -154,7 +167,7 @@ $(document).ready(function(){
         pause: 2500
     });
 
-   $('#company-logos ul').bxSlider({
+   $('#pages-clients ul.slides').bxSlider({
         mode: 'horizontal',
         auto: true,
         minSlides: 1,
@@ -163,8 +176,8 @@ $(document).ready(function(){
         pager: false,
         controls: false,
         useCss: false,
-        pause: 4500
-   })
+        pause: 3500
+   });
    
     /**
     *   PAGE | WORK

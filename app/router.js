@@ -6,7 +6,11 @@ var routerController = function(app){
 	console.log('routerController is load');
 
 	app.get('/', function (req,res){
-		res.render('index2');
+		res.render('index2',{
+			cities : CC,
+			months : MC,
+			days : DC
+		});
 	})
 
 	app.get('/usuario', function (req,res){

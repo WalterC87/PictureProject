@@ -15,7 +15,7 @@ app.configure(function(){
 	app.use(express.session({ secret: 'SECRET' }));
 });
 
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3000;
 
 var routerController = require('./app/router');
 var apiController = require('./app/controllers/api');
