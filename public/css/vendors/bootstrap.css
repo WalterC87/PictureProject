@@ -256,7 +256,7 @@
 .branding a.recibir{
   background-image: url('/img/funciona/sprite_funciona.png');
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: 400%;
   margin: 0 auto;
   padding: 0;
   width: 225px;
@@ -272,7 +272,7 @@
 .branding a.recibir:hover{
   background-image: url('/img/funciona/sprite_funciona_hover.png');
   background-repeat: no-repeat;
-  background-size: 300%;
+  background-size: 400%;
   margin: 0 auto;
   padding: 0;
   width: 225px;
@@ -430,17 +430,17 @@
 }
 
 .branding a.seleccion{
-  background-position: 0 0;
+  background-position: -675px 0;
 }
 .branding a.seleccion:hover{
-  background-position: 0 0;
+  background-position: -675px 0;
 }
 
 .branding a.regalar{
-  background-position: -225px 0;
+  background-position: 0 0;
 }
 .branding a.regalar:hover{
-  background-position: -225px 0;
+  background-position: 0 0;
 }
 .branding a.recibir{
   background-position: -450px 0;
